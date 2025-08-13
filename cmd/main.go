@@ -1,17 +1,30 @@
 package main
 
 import (
+	"log"
+
+	"github.com/davigomes0/P.S.AfiliadosAPI/internal/api"
+	"github.com/davigomes0/P.S.AfiliadosAPI/internal/database"
 	"github.com/gin-gonic/gin"
+	"github.com/joho/godotenv"
 )
 
 func main() {
-	server := gin.Default()
+	err := godotenv.Load()
+	if err != nil {
+		log.Fatalf("erro ao carregar o arquivo .env: %v", err)
+	}
 
-	server.GET("/ping", func(ctx *gin.Context) {
-		ctx.JSON(200, gin.H{
-			"message": "pong",
-		})
-	})
+	db := database.NewDB()
 
-	server.Run(":8000")
+	router := gin.Default()
+
+	handlers := api.NewHandlers(db)
+
+	router.POST("/api/v1/conversions", handlers.CreateConversion)
+
+	log.Println("Servidor iniciado na porta 8080")
+	if err := router.Run(":8080"); err != nil {
+		log.Fatalf("Erro ao iniciar o servidor: %v", err)
+	}
 }
