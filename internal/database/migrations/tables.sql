@@ -16,4 +16,4 @@ CREATE TABLE conversions (
 
 );
 
-INSERT INTO partners (name, api_key) VALUES ('ParceiroFulano', 'davi-chave-1234');
+INSERT INTO partners (name, api_key) VALUES ('ParceiroX', 'davi-chave-1234');
