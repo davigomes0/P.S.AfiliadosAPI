@@ -78,7 +78,7 @@ Esta requisição registrará uma nova conversão no banco de dados.
 ```bash
 curl -X POST http://localhost:8080/api/v1/conversions \
 -H "Content-Type: application/json" \
--H "X-API-Key: davi-chave-secreta-1234" \
+-H "X-API-Key: davi-chave-1234" \
 -d '{
   "transaction_id": "tx-12345678",
   "amount": 99.99

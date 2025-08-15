@@ -16,6 +16,4 @@ CREATE TABLE conversions (
 
 );
 
-
---teste
 INSERT INTO partners (name, api_key) VALUES ('ParceiroFulano', 'davi-chave-1234');
