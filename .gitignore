@@ -1,0 +1,10 @@
+# Binários de Go
+*.exe
+*.bin
+
+# Módulos de dependências
+/vendor/
+/bin/
+
+# Variáveis de ambiente
+.env
