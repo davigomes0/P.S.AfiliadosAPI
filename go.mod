@@ -1,4 +1,5 @@
-module go-api
+module github.com/davigomes0/P.S.AfiliadosAPI
+
 
 go 1.24.6
 

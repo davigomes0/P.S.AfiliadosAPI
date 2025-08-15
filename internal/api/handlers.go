@@ -3,9 +3,8 @@ package api
 import (
 	"net/http"
 
-	"go-api/internal/database"
-
-	"github.com/gin-gonic/gin"
+	 "github.com/gin-gonic/gin"
+   "github.com/davigomes0/P.S.AfiliadosAPI/internal/database"
 )
 
 type Handlers struct {
